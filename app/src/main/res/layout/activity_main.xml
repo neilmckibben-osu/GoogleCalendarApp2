@@ -31,7 +31,7 @@
             android:layout_height="fill_parent">
 
             <Switch
-                android:id="@+id/switch2"
+                android:id="@+id/mondaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:text="Switch"
@@ -40,38 +40,36 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/mondayButton"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="Button"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch2"
+                app:layout_constraintTop_toBottomOf="@+id/mondaySwitch"
                 tools:layout_editor_absoluteX="296dp"
                 tools:layout_editor_absoluteY="75dp" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/mondayTextView"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:text="TextView"
-                app:layout_constraintEnd_toStartOf="@+id/button5"
+                app:layout_constraintEnd_toStartOf="@+id/mondayButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch2"
-                tools:layout_editor_absoluteX="86dp"
-                tools:layout_editor_absoluteY="61dp" />
+                app:layout_constraintTop_toBottomOf="@+id/mondaySwitch" />
 
             <Switch
-                android:id="@+id/switch3"
+                android:id="@+id/tuesdaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="50dp"
                 android:text="Switch"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch2" />
+                app:layout_constraintTop_toBottomOf="@+id/mondaySwitch" />
 
             <Switch
-                android:id="@+id/switch4"
+                android:id="@+id/wednesdaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="50dp"
@@ -79,62 +77,155 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch3" />
+                app:layout_constraintTop_toBottomOf="@+id/tuesdaySwitch" />
 
             <Switch
-                android:id="@+id/switch5"
+                android:id="@+id/thursdaySwitch"
                 android:layout_width="match_parent"
-                android:layout_height="75dp"
+                android:layout_height="102dp"
                 android:layout_marginBottom="50dp"
                 android:layout_marginTop="50dp"
                 android:text="Switch"
-                app:layout_constraintBottom_toTopOf="@+id/switch6"
+                app:layout_constraintBottom_toTopOf="@+id/fridaySwitch"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch4" />
+                app:layout_constraintTop_toBottomOf="@+id/wednesdaySwitch" />
 
             <Switch
-                android:id="@+id/switch6"
+                android:id="@+id/fridaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="50dp"
                 android:text="Switch"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch5" />
+                app:layout_constraintTop_toBottomOf="@+id/thursdaySwitch" />
 
             <Switch
-                android:id="@+id/switch8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Switch"
-                app:layout_constraintTop_toBottomOf="parent"
-                tools:layout_editor_absoluteX="132dp" />
-
-            <Switch
-                android:id="@+id/switch9"
+                android:id="@+id/saturdaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75"
                 android:layout_marginEnd="8dp"
-                android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="50dp"
                 android:text="Switch"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch6" />
+                app:layout_constraintTop_toBottomOf="@+id/fridaySwitch" />
 
             <Switch
-                android:id="@+id/switch10"
+                android:id="@+id/sundaySwitch"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
                 android:layout_marginTop="50dp"
                 android:text="Switch"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/switch9" />
+                app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
+
+            <Button
+                android:id="@+id/tuesdayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tuesdaySwitch" />
+
+            <TextView
+                android:id="@+id/tuesdayTextView"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/tuesdayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tuesdaySwitch" />
+
+            <TextView
+                android:id="@+id/wednesdayView"
+                android:layout_width="match_constraint"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/wednesdayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wednesdaySwitch" />
+
+            <Button
+                android:id="@+id/wednesdayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wednesdaySwitch" />
+
+            <Button
+                android:id="@+id/thursdayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thursdaySwitch" />
+
+            <Button
+                android:id="@+id/fridayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="@+id/thursdayButton"
+                app:layout_constraintTop_toBottomOf="@+id/fridaySwitch" />
+
+            <Button
+                android:id="@+id/saturdayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
+
+            <TextView
+                android:id="@+id/fridayTextView"
+                android:layout_width="match_constraint"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/fridayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fridaySwitch" />
+
+            <TextView
+                android:id="@+id/thursdayTextView"
+                android:layout_width="match_constraint"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/thursdayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thursdaySwitch" />
+
+            <TextView
+                android:id="@+id/saturdayTextView"
+                android:layout_width="match_constraint"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/saturdayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/saturdaySwitch" />
+
+            <TextView
+                android:id="@+id/sundayTextView"
+                android:layout_width="match_constraint"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/sundayButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sundaySwitch" />
+
+            <Button
+                android:id="@+id/sundayButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sundaySwitch" />
 
         </android.support.constraint.ConstraintLayout>
 
