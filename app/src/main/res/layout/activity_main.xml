@@ -105,7 +105,7 @@
             <Switch
                 android:id="@+id/saturdaySwitch"
                 android:layout_width="match_parent"
-                android:layout_height="75"
+                android:layout_height="75dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="50dp"
@@ -144,7 +144,7 @@
 
             <TextView
                 android:id="@+id/wednesdayView"
-                android:layout_width="match_constraint"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toStartOf="@+id/wednesdayButton"
@@ -185,7 +185,7 @@
 
             <TextView
                 android:id="@+id/fridayTextView"
-                android:layout_width="match_constraint"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toStartOf="@+id/fridayButton"
@@ -194,7 +194,7 @@
 
             <TextView
                 android:id="@+id/thursdayTextView"
-                android:layout_width="match_constraint"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toStartOf="@+id/thursdayButton"
@@ -203,7 +203,7 @@
 
             <TextView
                 android:id="@+id/saturdayTextView"
-                android:layout_width="match_constraint"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toStartOf="@+id/saturdayButton"
@@ -212,7 +212,7 @@
 
             <TextView
                 android:id="@+id/sundayTextView"
-                android:layout_width="match_constraint"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toStartOf="@+id/sundayButton"
