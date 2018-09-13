@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView"
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+        android:fillViewport="true"
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:text="Switch"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch2"
+                tools:layout_editor_absoluteX="296dp"
+                tools:layout_editor_absoluteY="75dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/button5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch2"
+                tools:layout_editor_absoluteX="86dp"
+                tools:layout_editor_absoluteY="61dp" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="50dp"
+                android:text="Switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="50dp"
+                android:text="Switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch3" />
+
+            <Switch
+                android:id="@+id/switch5"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="50dp"
+                android:text="Switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch4" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="50dp"
+                android:text="Switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switch5" />
+
+            <Switch
+                android:id="@+id/switch8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:layout_editor_absoluteX="132dp" />
+
+            <Switch
+                android:id="@+id/switch9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Switch"
+                app:layout_constraintTop_toBottomOf="@+id/switch6"
+                tools:layout_editor_absoluteX="122dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
