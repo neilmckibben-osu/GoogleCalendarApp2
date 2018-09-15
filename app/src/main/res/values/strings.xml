@@ -2,4 +2,14 @@
     <string name="app_name">GoogleCalendarApp</string>
     <string name= "quit_out">Quit Out</string>
     <string name="select_time">Select Time</string>
+    <string name ="switch_initial">Alarm not set</string>
+    <string name ="text_view_monday">Monday</string>
+    <string name ="text_view_tuesday">Tuesday</string>
+    <string name ="text_view_wednesday">Wednesday</string>
+    <string name ="text_view_thursday">Thursday</string>
+    <string name ="text_view_friday">Friday</string>
+    <string name ="text_view_saturday">Saturday</string>
+    <string name ="text_view_sunday">Sunday</string>
+    <string name="button_name">Set alarm</string>
+
 </resources>
