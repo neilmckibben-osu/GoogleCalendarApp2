@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -47,6 +48,40 @@ public class MainActivity extends AppCompatActivity {
     TextView update_text;
     Context context;
     PendingIntent pending_intent;
+    String string;
+
+    public void setAlarm(int hour, int minute, Calendar calendar, Switch switch_view){
+
+
+        String hourString = String.valueOf(hour);
+        String minuteString = String.valueOf(minute);
+        calendar.set(Calendar.HOUR_OF_DAY, hour);
+        calendar.set(Calendar.MINUTE, minute);
+        String time = "AM";
+        //Create pending intent that delays intent till calendar time
+/*        pending_intent = PendingIntent.getBroadcast(MainActivity.this,
+            0, my_intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        alarm_manager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pending_intent);*/
+        if(hour > 12){
+            time = "PM";
+            hourString = String.valueOf(hour -12);
+        }
+
+        if(minute < 10){
+            minuteString = "0"+minuteString;
+        }
+        switch_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
+        if(switch_view.isChecked()){
+            Toast.makeText(getApplicationContext(), getString(R.string.update_alarm),
+                    Toast.LENGTH_SHORT).show();
+        }
+        else{
+            switch_view.setChecked(true);
+        }
+
+
+        }
+
 
     /*
     On returning from the popup it assigns the returned time, if there is one to the text view and
@@ -71,8 +106,18 @@ public class MainActivity extends AppCompatActivity {
         saturday_switch_view = (Switch) findViewById(R.id.saturdaySwitch);
         sunday_switch_view = (Switch) findViewById(R.id.sundaySwitch);
 
+        final Calendar calendar = Calendar.getInstance();
 
 
+        /*Grabs hour and updates the textview, would've preferred to put all the code within another
+        *method but it seems that using @Override leads to some issues with instantiating new
+        * methods - should ask someone about this
+        *
+        *
+        * Switch case itself updates the respective switch and textview depending on the
+        * REQUEST_CODE which is associated with each day. Activity returns the alarm time. Turns
+        * the switch button on, updating or sending out a new alarm.
+        */
 
         Log.i("code", String.valueOf(requestCode));
         switch (requestCode) {
@@ -80,126 +125,53 @@ public class MainActivity extends AppCompatActivity {
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
+                    setAlarm(hour, minute, calendar, monday_switch_view);
 
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    monday_switch_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
                 }
                 break;
             case REQUEST_CODE_TUESDAY:
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
+                    setAlarm(hour, minute, calendar, tuesday_switch_view);
 
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    tuesday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
                 }
                 break;
             case REQUEST_CODE_WEDNESDAY:
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
+                    setAlarm(hour, minute, calendar, wednesday_switch_view);
 
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    wednesday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
                 }
                 break;
             case REQUEST_CODE_THURSDAY:
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
+                    setAlarm(hour, minute, calendar, thursday_switch_view);
 
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    thursday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
                 }
                 break;
             case REQUEST_CODE_FRIDAY:
-                if(resultCode == Activity.RESULT_OK){
+                if(resultCode == Activity.RESULT_OK) {
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
-
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    friday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
+                    setAlarm(hour, minute, calendar, friday_switch_view);
                 }
-                break;
+                    break;
             case REQUEST_CODE_SATURDAY:
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
-
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    saturday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
+                    setAlarm(hour, minute, calendar, saturday_switch_view);
                 }
                 break;
             case REQUEST_CODE_SUNDAY:
                 if(resultCode == Activity.RESULT_OK){
                     int hour = data.getIntExtra("hour time", 0);
                     int minute = data.getIntExtra("minute time", 0);
-                    String hourString = String.valueOf(hour);
-                    String minuteString = String.valueOf(minute);
-                    String time = "AM";
-                    if(hour > 12){
-                        time = "PM";
-                        hourString = String.valueOf(hour -12);
-                    }
-
-                    if(minute < 10){
-                        minuteString = "0"+minuteString;
-                    }
-                    sunday_text_view.setText("Alarm set for: "+hourString+":"+minuteString+" "+time);
+                    setAlarm(hour, minute, calendar, sunday_switch_view);
                 }
                 break;
 

@@ -11,5 +11,6 @@
     <string name ="text_view_saturday">Saturday</string>
     <string name ="text_view_sunday">Sunday</string>
     <string name="button_name">Set alarm</string>
+    <string name="update_alarm">Alarm has been updated</string>
 
 </resources>
