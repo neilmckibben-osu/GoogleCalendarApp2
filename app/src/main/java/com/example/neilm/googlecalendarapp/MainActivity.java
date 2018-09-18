@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setAlarm(int hour, int minute, Calendar calendar, Switch switch_view){
 
+        final Intent my_intent = new Intent(this.context, Alarm_Receiver.class);
 
         String hourString = String.valueOf(hour);
         String minuteString = String.valueOf(minute);
@@ -59,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
         calendar.set(Calendar.MINUTE, minute);
         String time = "AM";
         //Create pending intent that delays intent till calendar time
-/*        pending_intent = PendingIntent.getBroadcast(MainActivity.this,
+        pending_intent = PendingIntent.getBroadcast(MainActivity.this,
             0, my_intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        alarm_manager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pending_intent);*/
+        alarm_manager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pending_intent);
         if(hour > 12){
             time = "PM";
             hourString = String.valueOf(hour -12);
