@@ -23,6 +23,10 @@
 
         </activity>
         <receiver android:name=".Alarm_Receiver"></receiver>
+
+        <service android:name=".Ringtone_Playing_Services"
+            android:enabled = "true">
+        </service>
     </application>
 
 </manifest>
